@@ -1,7 +1,18 @@
 <template>
     <div class="hurdleaLeft">
-        <div class="hurdleLeft-th"></div>
-        <div class="hurdleLeft-body"></div>
+        <div class="hurdleLeft-th">
+        </div>
+        <div class="hurdleLeft-body">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 </template>
 <script>
@@ -13,7 +24,6 @@ export default {
   .hurdleaLeft {
       width: 100%;
       background-color: crimson;
-      opacity: 0.8;
        .hurdleLeft-th {
         width: 180px;
         height: 60px;
@@ -24,6 +34,13 @@ export default {
       .hurdleLeft-body {
         width: 100%;
         background-color: cornsilk;
+        div {
+            width: 100px;
+            height: 50px;
+            float: right;
+            background-color: royalblue;
+            margin: 5px 0;
+        }
       }
   }
 </style>
