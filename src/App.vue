@@ -4,18 +4,22 @@
         webcolor
      </div>
      <div class="body">
-       <hurdle-Left class="hurdle-Left"></hurdle-Left>
-       <hurdle-Right class="hurdle-Right"></hurdle-Right>
+       <div class="hurdle-Left">
+         <transition name="hurdle-Left" :duration="1000">
+           <router-view></router-view>
+         </transition>
+       </div>
+       <div class="hurdle-Right">
+         <hurdle-Right></hurdle-Right>
+       </div>
      </div>
   </div>
 </template>
 <script>
-import  hurdleLeft  from "@/views/hurdleLeft"
 import  hurdleRight  from "@/views/hurdleRight"
 export default {
     name: 'App',
     components: {
-      hurdleLeft,
       hurdleRight
     },
     mounted() {
@@ -32,11 +36,13 @@ export default {
 }
 #app {
   position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #99CCCC ;
   .logo {
     width: 100%;
     height: 400px;
-    background-color: #000000;
-    color: cornsilk;
+    color: #000000;
     font-size: 120px;
     line-height: 170px;
     font-family: Arial,Helvetica,sans-serif;     
@@ -53,12 +59,28 @@ export default {
     clear: both;
     box-shadow: 1px 1px 1px 0.5px #000000;
     .hurdle-Left {
-      width: 200px;
+      width: calc(100% - 80px);
       height: 100%;
       float: left;
+      position: absolute;
+      /* 设置持续时间和动画函数 */
+      .hurdle-Left-enter-active {
+        transition: all 1s ease;
+      }
+      .hurdle-Left-leave-active {
+        transition: all 2s ease;
+      }
+      .hurdle-Left-enter {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      .hurdle-Left-leave-to {
+        transform: translateX(-120%);
+        opacity: 0;
+      }
     }
     .hurdle-Right {
-      width: calc(100% - 200px);
+      width: 80px;
       height: 100%;
       float: right;
     }

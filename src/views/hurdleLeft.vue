@@ -1,19 +1,11 @@
 <template>
     <div class="hurdleaLeft">
-        <div class="hurdleLeft-th">
-        </div>
-        <div class="hurdleLeft-body">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="hurdleaLeft-body">
+                    <div style="width:100%;height: 500px;"></div>
+         <div style="width:100%;height: 500px;"></div>
+          <div style="width:100%;height: 500px;"></div>
+           <div style="width:100%;height: 500px;"></div>
+            <div style="width:100%;height: 500px;"></div>
         </div>
     </div>
 </template>
@@ -25,24 +17,13 @@ export default {
 <style scoped lang="scss">
   .hurdleaLeft {
       width: 100%;
-      background-color: crimson;
-       .hurdleLeft-th {
-        width: 180px;
-        height: 60px;
-        border-radius: 20px;
-        margin: 10px auto;
-        background-color: chocolate;
-      }
-      .hurdleLeft-body {
-        width: 100%;
-        background-color: cornsilk;
-        div {
-            width: 100px;
-            height: 50px;
-            float: right;
-            background-color: royalblue;
-            margin: 5px 0;
-        }
+      height: 100%;
+      overflow: hidden;
+      background-color: rgba($color: #EEEEEE , $alpha: 0.6);
+      .hurdleaLeft-body{
+          width: 100%;
+          height: 100%;
+          overflow-y: auto;
       }
   }
 </style>
